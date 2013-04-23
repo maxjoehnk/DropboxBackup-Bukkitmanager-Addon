@@ -64,6 +64,12 @@
 	  <artifactId>httpclient</artifactId>
 	  <version>4.2.4</version>
     </dependency>
+    <!-- Repack of Dropbox because there is no official Repo -->
+    <dependency>
+      <groupId>com.syncthemall</groupId>
+      <artifactId>dropbox-java-sdk</artifactId>
+      <version>1.5.3.2</version>
+    </dependency>
     <dependency>
       <groupId>org.efreak.bukkitmanager</groupId>
       <artifactId>bukkitmanager</artifactId>
