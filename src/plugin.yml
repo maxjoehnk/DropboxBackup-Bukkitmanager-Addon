@@ -1,0 +1,7 @@
+name: DropboxBackupAddon
+main: org.efreak.bukkitmanager.addon.dropboxbackup.DropboxBackup
+version: 1.0
+website: http://dev.bukkit.org/server-mods/bukkitmanager
+author: e-freak
+prefix: BukkitmanagerDropboxBackup
+depend: [Bukkitmanager]
