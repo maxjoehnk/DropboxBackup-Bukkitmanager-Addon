@@ -1,4 +1,6 @@
-<project>
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.efreak.bukkitmanager.addon.dropboxbackup</groupId>
   <artifactId>dropboxbackup</artifactId>
@@ -24,9 +26,9 @@
   </properties>
   
   <scm>
-    <developerConnection>scm:git:git@github.com:efreak1996/DropboxBackup-Bukkitmanager-Addon.git</developerConnection>
-    <connection>scm:git:git://github.com/efreak1996/DropboxBackup-Bukkitmanager-Addon.git</connection>
-    <url>https://github.com/efreak1996/DropboxBackup-Bukkitmanager-Addon/tree/master/</url>
+    <developerConnection>scm:git:git@github.com:e-freak/DropboxBackup-Bukkitmanager-Addon.git</developerConnection>
+    <connection>scm:git:git://github.com/e-freak/DropboxBackup-Bukkitmanager-Addon.git</connection>
+    <url>https://github.com/e-freak/DropboxBackup-Bukkitmanager-Addon/tree/master/</url>
   </scm>
   
   <licenses>
@@ -78,59 +80,11 @@
   </dependencies>
 
   <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.7</version>
-        <configuration>
-          <linksource>true</linksource>
-        </configuration>
-        <executions>
-          <execution>
-            <id>attach-javadoc</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>1.4</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>shade</goal>
-            </goals>
-            <configuration>
-              <artifactSet>
-                <includes>
-                  <include>commons-logging:commons-logging</include>
-                  <include>org.apache.httpcomponents:httpcore</include>
-                  <include>org.apache.httpcomponents:httpmime</include>
-                  <include>org.apache.httpcomponents:httpclient</include>
-                  <include>com.syncthemall:dropbox-java-sdk</include>
-                </includes>
-              </artifactSet>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
   </build>
 </project>
