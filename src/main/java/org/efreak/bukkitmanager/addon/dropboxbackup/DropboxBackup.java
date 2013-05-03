@@ -22,6 +22,7 @@ public class DropboxBackup extends BukkitmanagerAddon {
 		config.update("Autobackup.Dropbox.KeyToken", "");
 		config.update("Autobackup.Dropbox.SecretToken", "");
 		config.update("Autobackup.Dropbox.Path", "backups");
+		config.addToList("PluginUpdater.Blacklist.List", "DropboxBackupAddon");
 		config.save();
 		//Add Language File Entries
 		
